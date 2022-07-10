@@ -14,7 +14,7 @@ int getUserInput()
 }
 
 // This function will ask user to enter their name
-// Retrun value will be a string entered by user from the keyboard
+// Return value will be a string entered by user from the keyboard
 std::string getUserName()
 {
     std::string userName{""};
@@ -23,11 +23,23 @@ std::string getUserName()
     return userName;
 }
 
+/* This function accept two arguments
+   @num is an integer received from user input
+   @multiplier is an integer we can use to multiply @num with the given multiplier
+*/
+void printTheResult(int num, int multiplier)
+{
+    std::cout << num << " multiplied by " << multiplier << " = " << num * multiplier << '\n';
+}
+
 int main()
 {
     std::string name{getUserName()};
     int num{getUserInput()};
-    std::cout << "Welcome The Awesome user named, " << name << ". \n"
-              << num << " multiple by 3 = " << num * 3 << '\n';
+    std::cout << "Welcome The Awesome user named, " << name << ". \n";
+
+    printTheResult(num, 2); // print num multiplied by 2
+    printTheResult(num, 5); // print num multiplied by 5
+
     return EXIT_SUCCESS;
 }
