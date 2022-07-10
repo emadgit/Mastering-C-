@@ -24,7 +24,7 @@ std::string getUserName()
 }
 
 /* This function accept two arguments
-   @num is an integer received from user input
+   @num is an integer that we want to do the multiply operation on it.
    @multiplier is an integer we can use to multiply @num with the given multiplier
 */
 void printTheResult(int num, int multiplier)
